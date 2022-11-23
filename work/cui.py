@@ -27,7 +27,7 @@ def ctl(barnum):
                 fout.write('Timeout ' + tstr + ' : ' + barnum + '\n')
 
     else:
-        # print('Noint')
+        #print('Noint')
         pass
     
 while True:
