@@ -12,7 +12,7 @@ def ctl(barnum):
             'barnum': barnum,
             }
         r = requests.post(
-            "http://192.168.0.50:9000/api/store/store.php",
+            "https://api-stoful.meiden-travel.jp/api/store/store.php",
             data=payload,
             )
         # print(r.status_code)    # HTTPのステータスコード取得
