@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DISPLAY=host.docker.internal:0.0
+    volumes:
+      - ./work:/work
+    ports:
+      - 8888:8888
+    image: test:latest
+    container_name: python_work
+    command:
+      jupyter lab
+        --ip=0.0.0.0
+        --allow-root
+        --notebook-dir='/work'
+        --LabApp.token=''
