@@ -1,8 +1,5 @@
 import requests 
 from datetime import datetime as dt
-import json
-
-url="http://192.168.0.50:9000/api/store/store.php"
 
 # Enterキー押したときの処理
 def ctl(barnum):
@@ -19,8 +16,8 @@ def ctl(barnum):
                 data=payload,
                 timeout=2,
                 )
-            # print(r.status_code)    # HTTPのステータスコード取得
-            print(r.text)    # レスポンスのHTMLを文字列で取得
+            # print(r.status_code)
+            print(r.text) # 出力
         except:
             print('timeout')
             with open('error.txt', 'a') as fout:
